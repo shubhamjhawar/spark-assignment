@@ -1,6 +1,7 @@
 from flask import Flask,jsonify, render_template
 import requests
 from pyspark.sql import SparkSession
+from apikeys import data,hostname
 app = Flask(__name__)
 spark = SparkSession.builder.appName("covid").getOrCreate()
 
@@ -27,8 +28,8 @@ def show_data():
     url = "https://covid-19-india2.p.rapidapi.com/details.php"
 
     headers = {
-        "X-RapidAPI-Key": "cd6bdbf7d4mshe14c31a94790f19p1ef9fdjsn5aa9c7d4c16f",
-        "X-RapidAPI-Host": "covid-19-india2.p.rapidapi.com"
+        "X-RapidAPI-Key": data,
+        "X-RapidAPI-Host": hostname
     }
 
     response = requests.request("GET", url, headers=headers)
