@@ -2,13 +2,13 @@ import requests
 import pandas as pd
 import json
 import csv
-
+from apikeys import data,hostname
 def get_data_and_convert_to_csv():
     url = "https://covid-19-india2.p.rapidapi.com/details.php"
 
     headers = {
-            "X-RapidAPI-Key": "cd6bdbf7d4mshe14c31a94790f19p1ef9fdjsn5aa9c7d4c16f",
-            "X-RapidAPI-Host": "covid-19-india2.p.rapidapi.com"
+            "X-RapidAPI-Key": data,
+            "X-RapidAPI-Host": hostname,
     }
 
     response = requests.request("GET", url, headers=headers)
@@ -17,7 +17,7 @@ def get_data_and_convert_to_csv():
     json_data.popitem()
     json_data.popitem()
     field_names = ['slno', 'state', 'confirm','cured','death','active','total']
-    with open('coviddata.csv', mode='w', newline='') as file:
+    with open('coviddata1.csv', mode='w', newline='') as file:
 
         # create a CSV writer
         writer = csv.writer(file)
