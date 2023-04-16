@@ -17,7 +17,7 @@ build/
 .idea/
 docs/_build/
 .vscode
-apikeys.pyc
+apikeys.py
 
 # Coverage reports
 htmlcov/
