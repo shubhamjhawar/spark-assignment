@@ -149,5 +149,5 @@ def least_well():
 
 * This function returns the state with the lowest efficiency in handling COVID-19, which is calculated as the ratio of total recoveries to total COVID-19 cases. The function sorts the data in ascending order of this ratio and selects the state with the lowest value. It then returns the name of that state in JSON format.
 
-### Dataframe:
+
 
