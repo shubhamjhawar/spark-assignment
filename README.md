@@ -1,6 +1,6 @@
 # Pyspark-Assignment
 
-## covid_data.py
+## createdata.py
 
 ```
 def get_data():
