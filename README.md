@@ -5,12 +5,14 @@
 ```
 def get_data():
     url = "https://covid-19-india2.p.rapidapi.com/details.php"
+
     headers = {
-        "X-RapidAPI-Key": KEY,
-        "X-RapidAPI-Host": "hostname"
+            "X-RapidAPI-Key": data,
+            "X-RapidAPI-Host": hostname,
     }
+
     response = requests.request("GET", url, headers=headers)
-    return response
+    json_data = response.json() 
 
 ```
 
